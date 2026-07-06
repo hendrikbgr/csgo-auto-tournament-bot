@@ -1,2 +1,2 @@
-# csgo-auto-tournament-bot
+# iptv-web
 A discord bot that serves out CSGO Auto Tournament server
