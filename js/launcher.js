@@ -72,18 +72,50 @@ devReset.addEventListener('click', () => {
   launchRandom();
 });
 
-devTrigger.addEventListener('click', () => {
-  devTaps++;
-  clearTimeout(devTapTimer);
-  devTapTimer = setTimeout(() => { devTaps = 0; }, 2000);
-  if (devTaps >= 5) {
-    devTaps = 0;
+function registerDevTrigger() {
+  devTrigger.addEventListener('click', () => {
+    devTaps++;
+    clearTimeout(devTapTimer);
+    devTapTimer = setTimeout(() => { devTaps = 0; }, 2500);
+    if (devTaps >= 3) {
+      devTaps = 0;
+      openDevMenu();
+    }
+  });
+
+  devTrigger.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
     openDevMenu();
-  }
-});
+  });
+
+  let holdTimer;
+  devTrigger.addEventListener('touchstart', () => {
+    holdTimer = setTimeout(openDevMenu, 800);
+  }, { passive: true });
+  devTrigger.addEventListener('touchend', () => clearTimeout(holdTimer));
+}
 
 devMenu.addEventListener('click', (e) => {
   if (e.target === devMenu) closeDevMenu();
 });
 
-launchRandom();
+function showBootError(message) {
+  root.innerHTML = `
+    <div class="app-shell" style="align-items:center;justify-content:center;text-align:center;gap:1rem">
+      <p style="font-size:3rem">💥</p>
+      <h1 class="app-title" style="color:#ff2d95">Oops, the chaos broke</h1>
+      <p style="opacity:0.8;max-width:320px;line-height:1.5">${message}</p>
+      <button class="btn-big" id="retry" style="background:#b8ff00;color:#000">TRY AGAIN</button>
+      <button class="btn-big" id="dev-fallback" style="background:#7b2ff7;color:#fff">OPEN APP PICKER</button>
+    </div>`;
+  root.querySelector('#retry').addEventListener('click', () => location.reload());
+  root.querySelector('#dev-fallback').addEventListener('click', openDevMenu);
+}
+
+try {
+  registerDevTrigger();
+  launchRandom();
+} catch (err) {
+  console.error(err);
+  showBootError('Something exploded during launch. Tap below to recover.');
+}

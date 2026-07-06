@@ -14,8 +14,6 @@ export default {
   tagline: 'IRL · Pass-the-phone classic',
 
   render(root) {
-    let phase = 'intro';
-
     root.innerHTML = `
       <div class="app-shell" style="background:linear-gradient(#1a1a3e,#0a0a1a);align-items:center;text-align:center">
         <h1 class="app-title">WHISPER WORD</h1>

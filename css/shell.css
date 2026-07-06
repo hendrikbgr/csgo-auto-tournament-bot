@@ -82,13 +82,13 @@ body {
 /* Hidden dev trigger */
 #dev-trigger {
   position: fixed;
-  bottom: max(6px, env(safe-area-inset-bottom));
-  left: max(6px, env(safe-area-inset-left));
-  width: 28px;
-  height: 28px;
-  opacity: 0.04;
-  border: none;
-  background: #fff;
+  bottom: max(8px, env(safe-area-inset-bottom));
+  left: max(8px, env(safe-area-inset-left));
+  width: 44px;
+  height: 44px;
+  opacity: 0.12;
+  border: 2px dashed rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.08);
   border-radius: 50%;
   z-index: 9998;
   cursor: pointer;
