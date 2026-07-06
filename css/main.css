@@ -23,6 +23,8 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  color-scheme: light only;
+  background-color: #b8e4f5;
 }
 
 body {
@@ -31,10 +33,11 @@ body {
   min-height: 100dvh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  background:
-    radial-gradient(ellipse 90% 60% at 50% -5%, var(--sun-soft), transparent 55%),
-    radial-gradient(ellipse 70% 45% at 85% 15%, rgba(142, 202, 230, 0.45), transparent 50%),
-    linear-gradient(175deg, var(--sky-soft) 0%, var(--sky-pale) 28%, var(--sand) 62%, var(--sand-deep) 100%);
+  background-color: #caf0f8;
+  background-image:
+    radial-gradient(ellipse 90% 60% at 50% -5%, rgba(255, 183, 3, 0.28), #caf0f8 55%),
+    radial-gradient(ellipse 70% 45% at 85% 15%, rgba(142, 202, 230, 0.55), #e8f6fb 50%),
+    linear-gradient(175deg, #caf0f8 0%, #e8f6fb 28%, #fff9f0 62%, #f5e6cc 100%);
 }
 
 a { color: inherit; text-decoration: none; }
@@ -93,7 +96,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   align-items: center;
   justify-content: space-between;
   margin-bottom: auto;
-  animation: rise 1s var(--ease) both;
 }
 
 .logo {
@@ -146,7 +148,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   text-transform: uppercase;
   color: var(--ink-soft);
   margin-bottom: 1.25rem;
-  animation: rise 1s var(--ease) 0.08s both;
 }
 
 .hero h1 {

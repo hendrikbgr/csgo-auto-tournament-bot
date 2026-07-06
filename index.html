@@ -5,13 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="Lumina Frame — Cinematic video production for brands that shine in the light.">
   <meta name="theme-color" content="#caf0f8">
+  <meta name="color-scheme" content="light">
   <meta property="og:title" content="Lumina Frame">
   <meta property="og:description" content="Cinematic video production. Bright stories. Bold results.">
   <title>Lumina Frame</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Plus+Jakarta+Sans:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* Critical light-mode styles — load even if external CSS fails */
+    html {
+      color-scheme: light only;
+      background-color: #b8e4f5;
+    }
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      background-color: #caf0f8;
+      background-image: linear-gradient(175deg, #caf0f8 0%, #e8f6fb 30%, #fff9f0 65%, #f5e6cc 100%);
+      color: #1d3557;
+    }
+  </style>
+  <link rel="stylesheet" href="/csgo-auto-tournament-bot/css/main.css?v=3">
 </head>
 <body>
 
@@ -58,6 +73,6 @@
     </div>
   </div>
 
-  <script src="js/main.js" defer></script>
+  <script src="/csgo-auto-tournament-bot/js/main.js?v=3" defer></script>
 </body>
 </html>
