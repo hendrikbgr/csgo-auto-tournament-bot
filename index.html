@@ -3,41 +3,399 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Party Gag Multiverse — 24 random chaotic mini apps, games & IRL party madness">
-  <meta name="theme-color" content="#0a0a12">
-  <title>Party Gag Multiverse</title>
+  <meta name="description" content="Lumina Frame — Award-winning video production studio. Brand films, commercials & documentaries that drive results.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:title" content="Lumina Frame — Video Production Studio">
+  <meta property="og:description" content="Cinematic stories for brands that refuse to blend in.">
+  <meta property="og:type" content="website">
+  <title>Lumina Frame — Video Production Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/shell.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div id="app-root"></div>
 
-  <button id="dev-trigger" aria-label="Dev trigger" title=""></button>
+  <div class="grain" aria-hidden="true"></div>
 
-  <div id="dev-menu" hidden>
-    <div class="dev-header">
-      <h2>🛠 Party Gag Multiverse</h2>
-      <button class="dev-close" id="dev-close">✕ CLOSE</button>
+  <!-- Navigation -->
+  <header class="nav" role="banner">
+    <div class="nav-inner">
+      <a href="#" class="logo">Lumina<span>.</span>Frame</a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary">Book a Call</a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-    <p class="dev-stats" id="dev-stats"></p>
-    <button class="dev-close" id="dev-reset" style="margin-bottom:1rem;background:#b8ff00;color:#000;width:100%">🔄 RESET CYCLE &amp; LAUNCH RANDOM</button>
-    <div class="dev-grid" id="dev-grid"></div>
+  </header>
+
+  <nav class="mobile-menu" aria-label="Mobile navigation">
+    <a href="#work">Work</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="btn btn-primary btn-lg">Book a Call</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-video-wrap" aria-hidden="true">
+      <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1492691527719-9d1e07e269b8?w=1920&q=80">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-film-set-with-professional-camera-and-lighting-34434-large.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <div class="hero-badge reveal">
+        <span class="hero-badge-dot"></span>
+        Now booking Q3 2026 productions
+      </div>
+      <h1 class="reveal reveal-delay-1">Stories that <em>move</em> people to act</h1>
+      <p class="hero-sub reveal reveal-delay-2">We're a full-service video production studio crafting cinematic brand films, commercials, and documentaries for companies ready to stand out — and convert.</p>
+      <div class="hero-ctas reveal reveal-delay-3">
+        <a href="#contact" class="btn btn-primary btn-lg">Book a Discovery Call</a>
+        <button type="button" class="btn btn-ghost btn-lg" data-open-reel>▶ Watch Showreel</button>
+      </div>
+      <div class="hero-stats reveal">
+        <div>
+          <div class="hero-stat-num">240+</div>
+          <div class="hero-stat-label">Projects delivered</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">1.2B</div>
+          <div class="hero-stat-label">Combined views</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">14</div>
+          <div class="hero-stat-label">Industry awards</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-hint-line"></div>
+    </div>
+  </section>
+
+  <!-- Client logos -->
+  <section class="logos" aria-label="Clients">
+    <div class="container">
+      <p class="logos-label reveal">Trusted by teams who take storytelling seriously</p>
+      <div class="logos-grid reveal">
+        <span>Nexus</span>
+        <span>Velora</span>
+        <span>Axiom</span>
+        <span>Pulse Co</span>
+        <span>Meridian</span>
+        <span>Arclight</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showreel -->
+  <section class="section" id="showreel">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Showreel 2026</p>
+        <h2 class="section-title">Two minutes of proof</h2>
+        <p class="section-desc">From global campaigns to intimate founder stories — every frame engineered to capture attention and drive action.</p>
+      </div>
+      <div class="showreel-wrap reveal" id="showreel-trigger" role="button" tabindex="0" aria-label="Play showreel">
+        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1200&q=80" alt="Cinematic film production still" loading="lazy">
+        <div class="showreel-play">
+          <div class="play-btn" aria-hidden="true">▶</div>
+        </div>
+        <div class="showreel-caption">LUMINA FRAME — SELECTED WORK 2024–2026</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">What we do</p>
+        <h2 class="section-title">Production built for impact</h2>
+      </div>
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-icon">🎬</div>
+          <h3>Brand Films</h3>
+          <p>Emotional narratives that define who you are — not just what you sell. Built for web, events, and paid media.</p>
+        </article>
+        <article class="service-card reveal reveal-delay-1">
+          <div class="service-icon">📺</div>
+          <h3>Commercials</h3>
+          <p>High-conversion spots for TV, streaming, and social. Concept to final master, delivered on deadline.</p>
+        </article>
+        <article class="service-card reveal reveal-delay-2">
+          <div class="service-icon">🎥</div>
+          <h3>Documentary</h3>
+          <p>Authentic long-form storytelling that builds trust. Founder films, impact docs, and series content.</p>
+        </article>
+        <article class="service-card reveal reveal-delay-3">
+          <div class="service-icon">📱</div>
+          <h3>Social Content</h3>
+          <p>Scroll-stopping short-form engineered for platforms — without sacrificing your brand's cinematic edge.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Selected work</p>
+        <h2 class="section-title">Results, not just reels</h2>
+        <p class="section-desc">Every project is measured against business outcomes — awareness, engagement, and conversion.</p>
+      </div>
+      <div class="work-grid">
+        <article class="work-card reveal">
+          <div class="work-thumb">
+            <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&q=80" alt="Tech product launch campaign" loading="lazy">
+            <span class="work-tag">Commercial</span>
+          </div>
+          <div class="work-body">
+            <h3>Velora Launch Film</h3>
+            <p>Global product reveal campaign across 12 markets.</p>
+            <div class="work-metrics">
+              <div class="work-metric"><strong>4.2M</strong><span>Views</span></div>
+              <div class="work-metric"><strong>38%</strong><span>Conv. lift</span></div>
+            </div>
+          </div>
+        </article>
+        <article class="work-card reveal reveal-delay-1">
+          <div class="work-thumb">
+            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80" alt="Documentary portrait" loading="lazy">
+            <span class="work-tag">Documentary</span>
+          </div>
+          <div class="work-body">
+            <h3>Built Different</h3>
+            <p>Founder documentary series for a Series C fintech.</p>
+            <div class="work-metrics">
+              <div class="work-metric"><strong>890K</strong><span>Views</span></div>
+              <div class="work-metric"><strong>3x</strong><span>Press pickup</span></div>
+            </div>
+          </div>
+        </article>
+        <article class="work-card reveal reveal-delay-2">
+          <div class="work-thumb">
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80" alt="Brand identity film" loading="lazy">
+            <span class="work-tag">Brand Film</span>
+          </div>
+          <div class="work-body">
+            <h3>Meridian Rebrand</h3>
+            <p>Hero film anchoring a full identity refresh.</p>
+            <div class="work-metrics">
+              <div class="work-metric"><strong>2.1M</strong><span>Views</span></div>
+              <div class="work-metric"><strong>52%</strong><span>Brand recall</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">How we work</p>
+        <h2 class="section-title">From brief to blockbuster</h2>
+      </div>
+      <div class="process-steps reveal">
+        <div class="process-step">
+          <h3>Discovery</h3>
+          <p>We dig into your goals, audience, and brand voice. No cookie-cutter treatments — ever.</p>
+        </div>
+        <div class="process-step">
+          <h3>Creative</h3>
+          <p>Concept development, scripting, and storyboarding with your team looped in at every stage.</p>
+        </div>
+        <div class="process-step">
+          <h3>Production</h3>
+          <p>World-class crew, cinema-grade kit, and a set experience that keeps talent comfortable.</p>
+        </div>
+        <div class="process-step">
+          <h3>Delivery</h3>
+          <p>Color-graded masters in every format you need — plus performance-optimized cuts for each channel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Client love</p>
+        <h2 class="section-title">Don't take our word for it</h2>
+      </div>
+      <div class="testimonial-slider">
+        <figure class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"Lumina Frame didn't just make a video — they made our entire rebrand feel inevitable. Our launch film drove more qualified leads in two weeks than the previous quarter."</blockquote>
+          <figcaption class="testimonial-author">
+            <div class="testimonial-avatar">SK</div>
+            <div>
+              <strong>Sarah Kim</strong>
+              <span>CMO, Velora</span>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"The best production partner we've worked with. Fast, obsessively detail-oriented, and they actually understand what converts on paid social. Already booked our next three projects."</blockquote>
+          <figcaption class="testimonial-author">
+            <div class="testimonial-avatar">MR</div>
+            <div>
+              <strong>Marcus Reid</strong>
+              <span>Head of Brand, Axiom</span>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="cta-band">
+    <div class="container cta-band-inner reveal">
+      <p class="cta-slots">● 3 production slots left for Q3</p>
+      <h2>Ready to make something people can't scroll past?</h2>
+      <p>Book a free 30-minute discovery call. We'll explore your goals, share relevant work, and outline a path to production — no pressure, no pitch deck.</p>
+      <a href="#contact" class="btn btn-primary btn-lg">Book Your Free Call →</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="section-label">Start a project</p>
+          <h2>Let's talk about your next film</h2>
+          <p>Tell us about your project and we'll respond within one business day with next steps and a tailored approach.</p>
+          <ul class="contact-perks">
+            <li>Free 30-min strategy call — no obligation</li>
+            <li>Custom treatment & budget range within 5 days</li>
+            <li>End-to-end production under one roof</li>
+            <li>Global shoots — LA, NYC, London, remote</li>
+          </ul>
+        </div>
+        <form class="contact-form reveal reveal-delay-1" id="contact-form">
+          <div class="form-success" id="form-success">
+            <div class="form-success-icon">🎬</div>
+            <h3>Message received!</h3>
+            <p>We'll be in touch within one business day. Check your inbox — great stories start there.</p>
+          </div>
+          <div class="form-fields">
+            <div class="form-row two">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Jane Smith" autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="jane@company.com" autocomplete="email">
+              </div>
+            </div>
+            <div class="form-row two">
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Your company" autocomplete="organization">
+              </div>
+              <div class="form-group">
+                <label for="budget">Budget range</label>
+                <select id="budget" name="budget" required>
+                  <option value="" disabled selected>Select range</option>
+                  <option>$15k – $30k</option>
+                  <option>$30k – $75k</option>
+                  <option>$75k – $150k</option>
+                  <option>$150k+</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="type">Project type</label>
+                <select id="type" name="type" required>
+                  <option value="" disabled selected>What do you need?</option>
+                  <option>Brand film</option>
+                  <option>Commercial / ad</option>
+                  <option>Documentary</option>
+                  <option>Social content</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="message">Tell us about the project</label>
+                <textarea id="message" name="message" required placeholder="Goals, timeline, audience — the more detail, the better our first conversation."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg form-submit">Send Project Brief →</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">Lumina<span>.</span>Frame</a>
+          <p>Cinematic video production for brands that refuse to blend in.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:hello@luminaframe.studio">hello@luminaframe.studio</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Vimeo</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Lumina Frame. All rights reserved.</span>
+        <span>Los Angeles · New York · London</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Video modal -->
+  <div class="modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Showreel video">
+    <div class="modal-inner">
+      <button class="modal-close" type="button">Close ✕</button>
+      <video id="modal-video" controls playsinline poster="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1200&q=80">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-film-set-with-professional-camera-and-lighting-34434-large.mp4" type="video/mp4">
+      </video>
+    </div>
   </div>
 
-  <script type="module">
-    import('./js/launcher.js').catch((err) => {
-      console.error(err);
-      const root = document.getElementById('app-root');
-      root.innerHTML = `
-        <div style="min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;font-family:sans-serif;color:#fff;background:#0a0a12;gap:1rem">
-          <p style="font-size:3rem">💥</p>
-          <h1 style="font-size:1.5rem;color:#ff2d95">Chaos failed to load</h1>
-          <p style="opacity:0.8;max-width:300px;line-height:1.5">The party apps hit a snag. Refresh, or hold the bottom-left dot to open the app picker.</p>
-          <button onclick="location.reload()" style="padding:0.8rem 1.5rem;font-size:1rem;border-radius:999px;border:3px solid #000;background:#b8ff00;cursor:pointer">REFRESH</button>
-        </div>`;
-    });
-  </script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
